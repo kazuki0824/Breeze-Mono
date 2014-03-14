@@ -1,0 +1,14 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ActiveRuntime="Mono 3.3.0 (master/6cd4ddc)&#xD;&#xA;Copyright)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Breeze-UI\MainWindow.cs">
+    <Files>
+      <File FileName="Breeze-UI\Program.cs" Line="1" Column="1" />
+      <File FileName="Breeze-UI\MainWindow.cs" Line="14" Column="18" />
+      <File FileName="Breeze-UI\Form1.cs" Line="15" Column="19" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
