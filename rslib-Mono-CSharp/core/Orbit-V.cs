@@ -8,7 +8,7 @@ using System.Net;
 using System.Text.RegularExpressions;
 using Microsoft.VisualBasic;
 using Newtonsoft.Json;
-using rslibMonoCSharp;
+using rslib_StringEvaluator;
 
 static class OrbitV
 {

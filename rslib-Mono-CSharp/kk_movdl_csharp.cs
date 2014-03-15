@@ -40,7 +40,7 @@ public static class kk_movDlForUser
             {
                 _tmp.Add(a.Split('=')[0], Uri.UnescapeDataString(a.Split('=')[1]));
             }
-            fmtmap.Add(Convert.ToInt32(_tmp["itag"]), (_tmp["url"]) + "&signature=" + _tmp["sig"]);
+            fmtmap.Add(Convert.ToInt32(_tmp["itag"]), (_tmp["url"]) + "&signature=");
             _tmp.Clear();
         }
 

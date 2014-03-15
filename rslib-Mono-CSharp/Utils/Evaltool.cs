@@ -1,9 +1,9 @@
-using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
-static class Evaltool
+namespace rslib_StringEvaluator {
+public class Evaltool
 {
 	public enum evalStrategy
 	{
@@ -12,16 +12,17 @@ static class Evaltool
 	}
 	public static bool Evaluation(string src, string pattern, evalStrategy strategy = evalStrategy.WildCard)
 	{
+        if (pattern.StartsWith("|") && pattern.EndsWith("|")) { strategy = evalStrategy.RegularExpression; }
 		if ((strategy == evalStrategy.RegularExpression)) {
 			return System.Text.RegularExpressions.Regex.IsMatch(src, pattern.Trim('|'));
 		} else {
-			return like (src, pattern);
-				;
+			return like_equivalent (src, pattern);
 		}
 	}
-	private static bool like(string src,string pattern)
+	private static bool like_equivalent(string src,string pattern)
 	{
 		pattern = pattern.Replace("*",".*").Replace("?",".").Replace("#","\\d");
 	    return	System.Text.RegularExpressions.Regex.IsMatch(src,pattern,System.Text.RegularExpressions.RegexOptions.Singleline);
 	}
+}
 }

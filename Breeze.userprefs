@@ -1,14 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ActiveRuntime="Mono 3.3.0 (master/6cd4ddc)&#xD;&#xA;Copyright)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Breeze-UI\MainWindow.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" ActiveRuntime="Mono 3.3.0 (master/6cd4ddc)&#xD;&#xA;Copyright)" />
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Breeze-UI\Program.cs" Line="1" Column="1" />
-      <File FileName="Breeze-UI\MainWindow.cs" Line="14" Column="18" />
-      <File FileName="Breeze-UI\Form1.cs" Line="15" Column="19" />
+      <File FileName="Breeze-UI\Program.cs" Line="17" Column="1" />
+      <File FileName="Breeze-UI\MainWindow.cs" Line="1" Column="1" />
+      <File FileName="Breeze-UI\Form1.cs" Line="1" Column="1" />
+      <File FileName="Breeze-gui-frost\Form1.cs" Line="1" Column="1" />
+      <File FileName="Breeze-gui-frost\Program.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>ffBatch\ffBatch.vbproj</String>
+  </DisabledProjects>
 </Properties>

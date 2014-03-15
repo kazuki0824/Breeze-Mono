@@ -5,8 +5,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Net;
 using System.Reflection;
+using rslib_StringEvaluator;
 
-static class myOrbit
+namespace rslib_Ctrl {
+public class myOrbit
 {
 	/// <summary>
 	/// Parser
@@ -40,7 +42,7 @@ static class myOrbit
 			"Dailymotion"
 		}
 	};
-	static internal vServiceKind UsingParserCk(string u)
+	public static vServiceKind UsingParserCk(string u)
 	{
 		vServiceKind attribute = default(vServiceKind);
 		if ((Evaltool.Evaluation(u, "http://(www\\.)?youtube\\.com/watch\\?.*", Evaltool.evalStrategy.RegularExpression)) || Evaltool.Evaluation(u, "http://youtu\\.be/\\w+")) {
@@ -77,4 +79,5 @@ static class myOrbit
             return null;
         }
 	}
+}
 }
