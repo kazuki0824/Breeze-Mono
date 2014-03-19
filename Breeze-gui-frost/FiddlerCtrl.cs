@@ -14,7 +14,6 @@ namespace Breeze_gui_frost
         public FiddlerCtrl()
         {
             InitializeComponent();
-            startFiddler();
         }
 
         public FiddlerCtrl(IContainer container)

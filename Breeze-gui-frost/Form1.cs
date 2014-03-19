@@ -15,6 +15,7 @@ namespace Breeze_gui_frost
         public Form1()
         {
             InitializeComponent();
+            fiddlerCtrl1.startFiddler();
         }
 
         private void fiddlerロードToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,17 +37,21 @@ namespace Breeze_gui_frost
         {
             // Index, Scheme, Request, MIME, Cookie
             var MIMEtype = oSession.oResponse.MIMEType;
-            ListViewItem item = listView1.Items.Add(new ListViewItem(new string[] {
+            Invoke(new Action(() =>
+            {
+                ListViewItem item = listView1.Items.Add(new ListViewItem(new string[] {
 	            Convert.ToString(listView1.Items.Count),
 	            oSession.oRequest.headers.UriScheme,
 	            oSession.oRequest.headers.RequestPath,
 	            MIMEtype,
                 oSession.oResponse.headers.HTTPResponseCode.ToString()
-                }) {
-	                    ForeColor = Color.Green,
-	                       Tag = oSession
-                    });
+                })
+                {
+                    ForeColor = Color.Green,
+                    Tag = oSession
+                });
                 item.EnsureVisible();
+            }));
             return;
         }
 
@@ -75,5 +80,11 @@ namespace Breeze_gui_frost
                 return true;
         }
         #endregion
+
+        private void listView1_DoubleClick(object sender, EventArgs e)
+        {
+            var i = (Fiddler.Session)((ListView)sender).SelectedItems[0].Tag;
+            queueResolver1.factory(i,new proxy());
+        }
     }
 }

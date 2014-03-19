@@ -55,6 +55,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.fiddlerCtrl1 = new Breeze_gui_frost.FiddlerCtrl(this.components);
+            this.queueResolver1 = new Breeze_gui_frost.QueueResolver(this.components);
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -133,7 +134,6 @@
             // 
             // fiddlerロードToolStripMenuItem
             // 
-            this.fiddlerロードToolStripMenuItem.Enabled = false;
             this.fiddlerロードToolStripMenuItem.Name = "fiddlerロードToolStripMenuItem";
             this.fiddlerロードToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.fiddlerロードToolStripMenuItem.Text = "Fiddler リッスン";
@@ -238,7 +238,7 @@
             this.groupBox1.Size = new System.Drawing.Size(582, 148);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "キャプチャされたファイル";
             // 
             // listView1
             // 
@@ -256,6 +256,7 @@
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
             this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listView1.DoubleClick += new System.EventHandler(this.listView1_DoubleClick);
             // 
             // name_p
             // 
@@ -321,6 +322,10 @@
             // 
             this.fiddlerCtrl1.FiddlerCaughtNormalMedia += new Breeze_gui_frost.FiddlerCtrl.FiddlerCaughtVideoEventHandler(this.fiddlerCtrl1_FiddlerCaughtNormalMedia);
             // 
+            // queueResolver1
+            // 
+            this.queueResolver1.NormalQueuePanel = this.panel1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -384,6 +389,7 @@
         private System.Windows.Forms.ColumnHeader AbsPath;
         private System.Windows.Forms.ColumnHeader mime;
         private System.Windows.Forms.ColumnHeader resCode;
+        internal QueueResolver queueResolver1;
     }
 }
 
