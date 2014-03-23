@@ -1,8 +1,8 @@
 ﻿namespace Breeze_gui_frost
 {
-    partial class dlQueue
+    partial class QueueResolver
     {
-        /// <summary> 
+        /// <summary>
         /// 必要なデザイナー変数です。
         /// </summary>
         private System.ComponentModel.IContainer components = null;
@@ -22,25 +22,15 @@
 
         #region コンポーネント デザイナーで生成されたコード
 
-        /// <summary> 
-        /// デザイナー サポートに必要なメソッドです。このメソッドの内容を 
+        /// <summary>
+        /// デザイナー サポートに必要なメソッドです。このメソッドの内容を
         /// コード エディターで変更しないでください。
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // dlQueue
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "dlQueue";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            components = new System.ComponentModel.Container();
         }
 
         #endregion
-
     }
 }

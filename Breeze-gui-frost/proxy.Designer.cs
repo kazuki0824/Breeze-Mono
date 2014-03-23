@@ -1,6 +1,6 @@
 ﻿namespace Breeze_gui_frost
 {
-    partial class dlQueue
+    partial class proxy
     {
         /// <summary> 
         /// 必要なデザイナー変数です。
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // dlQueue
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // proxy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "dlQueue";
+            this.Name = "proxy";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -42,5 +49,6 @@
 
         #endregion
 
+        private System.Windows.Forms.Timer timer1;
     }
 }

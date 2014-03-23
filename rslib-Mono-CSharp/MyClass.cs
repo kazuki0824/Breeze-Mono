@@ -1,4 +1,3 @@
-using System;
 
 namespace rslibMonoCSharp
 {
@@ -6,6 +5,7 @@ namespace rslibMonoCSharp
 	{
 		public MyClass ()
 		{
+
 		}
 	}
 }

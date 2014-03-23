@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Input;
 
 namespace Breeze_gui_frost
 {
@@ -17,6 +9,8 @@ namespace Breeze_gui_frost
         {
             InitializeComponent();
             this.LoadCompleted += setUiState;
+            this.button1.Click += (sender, e) => webBrowser1.GoBack();
+            this.button1.Click += (sender, e) => webBrowser1.GoForward();
         }
 
         public delegate void LoadCompletedEventHandler(object sender, WebBrowserDocumentCompletedEventArgs e);
@@ -38,11 +32,6 @@ namespace Breeze_gui_frost
             var c = (WebBrowser)sender;
             button1.Enabled = c.CanGoBack;
             button2.Enabled = c.CanGoForward;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)

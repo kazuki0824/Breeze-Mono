@@ -82,11 +82,11 @@
             // toolStripContainer1.ContentPanel
             // 
             this.toolStripContainer1.ContentPanel.Controls.Add(this.splitContainer1);
-            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1154, 632);
+            this.toolStripContainer1.ContentPanel.Size = new System.Drawing.Size(1234, 857);
             this.toolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer1.Location = new System.Drawing.Point(0, 0);
             this.toolStripContainer1.Name = "toolStripContainer1";
-            this.toolStripContainer1.Size = new System.Drawing.Size(1154, 656);
+            this.toolStripContainer1.Size = new System.Drawing.Size(1234, 881);
             this.toolStripContainer1.TabIndex = 1;
             this.toolStripContainer1.Text = "toolStripContainer1";
             // 
@@ -108,8 +108,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
-            this.splitContainer1.Size = new System.Drawing.Size(1154, 632);
-            this.splitContainer1.SplitterDistance = 857;
+            this.splitContainer1.Size = new System.Drawing.Size(1234, 857);
+            this.splitContainer1.SplitterDistance = 937;
             this.splitContainer1.TabIndex = 3;
             // 
             // panel1
@@ -118,7 +118,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(293, 632);
+            this.panel1.Size = new System.Drawing.Size(293, 857);
             this.panel1.TabIndex = 2;
             // 
             // menuStrip1
@@ -128,7 +128,7 @@
             this.fiddlerロードToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1154, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1234, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -153,8 +153,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer2.Size = new System.Drawing.Size(857, 632);
-            this.splitContainer2.SplitterDistance = 440;
+            this.splitContainer2.Size = new System.Drawing.Size(937, 857);
+            this.splitContainer2.SplitterDistance = 596;
             this.splitContainer2.TabIndex = 0;
             // 
             // browserInterface1
@@ -162,7 +162,7 @@
             this.browserInterface1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.browserInterface1.Location = new System.Drawing.Point(0, 0);
             this.browserInterface1.Name = "browserInterface1";
-            this.browserInterface1.Size = new System.Drawing.Size(857, 440);
+            this.browserInterface1.Size = new System.Drawing.Size(937, 596);
             this.browserInterface1.TabIndex = 0;
             this.browserInterface1.LoadCompleted += new Breeze_gui_frost.BrowserInterface.LoadCompletedEventHandler(this.browserInterface1_LoadCompleted);
             // 
@@ -174,7 +174,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(857, 188);
+            this.tabControl1.Size = new System.Drawing.Size(937, 257);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -184,7 +184,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(849, 162);
+            this.tabPage1.Size = new System.Drawing.Size(929, 231);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -195,9 +195,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.GhostWhite;
             this.panel3.Controls.Add(this.listView2);
-            this.panel3.Location = new System.Drawing.Point(596, 6);
+            this.panel3.Location = new System.Drawing.Point(676, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(247, 148);
+            this.panel3.Size = new System.Drawing.Size(247, 217);
             this.panel3.TabIndex = 1;
             // 
             // listView2
@@ -211,9 +211,10 @@
             this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView2.Location = new System.Drawing.Point(0, 0);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(247, 148);
+            this.listView2.Size = new System.Drawing.Size(247, 217);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.DoubleClick += new System.EventHandler(this.listView2_DoubleClick);
             // 
             // index
             // 
@@ -235,7 +236,7 @@
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Location = new System.Drawing.Point(8, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(582, 148);
+            this.groupBox1.Size = new System.Drawing.Size(662, 217);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "キャプチャされたファイル";
@@ -251,7 +252,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Location = new System.Drawing.Point(3, 15);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(576, 130);
+            this.listView1.Size = new System.Drawing.Size(656, 199);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -289,7 +290,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(849, 162);
+            this.tabPage2.Size = new System.Drawing.Size(849, 231);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -303,7 +304,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(843, 156);
+            this.panel2.Size = new System.Drawing.Size(843, 225);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -313,7 +314,7 @@
             this.label1.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(841, 154);
+            this.label1.Size = new System.Drawing.Size(841, 223);
             this.label1.TabIndex = 0;
             this.label1.Text = "Drop files to start conversion.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -330,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 656);
+            this.ClientSize = new System.Drawing.Size(1234, 881);
             this.Controls.Add(this.toolStripContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";

@@ -1,8 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-namespace rslib_StringEvaluator {
+namespace rslib_StringEvaluator
+{
 public class Evaltool
 {
 	public enum evalStrategy
