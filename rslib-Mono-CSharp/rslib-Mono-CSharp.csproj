@@ -41,13 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HttpWebRequestExtensions.cs" />
     <Compile Include="kk_movdl_csharp.cs" />
     <Compile Include="MyClass.cs" />
-    <Compile Include="PausableObservable_Beta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="core\Orbit-V.cs" />
     <Compile Include="core\Complex\n_getflv.cs" />
+    <Compile Include="Utils\AdjustToFileNameFormat.cs" />
     <Compile Include="Utils\Evaltool.cs" />
     <Compile Include="myOrbit-CSharp.cs" />
   </ItemGroup>

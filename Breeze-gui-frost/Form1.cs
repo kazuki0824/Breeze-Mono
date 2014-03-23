@@ -58,13 +58,14 @@ namespace Breeze_gui_frost
         private void browserInterface1_LoadCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
            var attribute= rslib_Ctrl.myOrbit.UsingParserCk(e.Url.AbsoluteUri);
-           if (attribute == rslib_Ctrl.myOrbit.vServiceKind.No) {
+           Logger.Push(attribute.ToString(), 0);
+            if (attribute == rslib_Ctrl.myOrbit.vServiceKind.No) {
                listView2.Clear();
                return;
            }
            else
            {
-               getvideoandshow(e.Url.AbsoluteUri);
+               var v =getvideoandshow(e.Url.AbsoluteUri);
            }
         }
 
@@ -75,7 +76,7 @@ namespace Breeze_gui_frost
             listView2.Clear();
             foreach (var item in dic)
             {
-                listView2.Items.Add(new ListViewItem(new string[] {item.Key.ToString(),item.Value.Item1,item.Value.Item2.AbsoluteUri}));
+                listView2.Items.Add(new ListViewItem(new string[] { item.Key.ToString(), item.Value.Item1, item.Value.Item2.AbsoluteUri }) {Tag = item.Value });
             } 
                 return true;
         }
@@ -85,6 +86,11 @@ namespace Breeze_gui_frost
         {
             var i = (Fiddler.Session)((ListView)sender).SelectedItems[0].Tag;
             queueResolver1.factory(i,new proxy());
+        }
+
+        private void listView2_DoubleClick(object sender, EventArgs e)
+        {
+            queueResolver1.factory(((Tuple<string,Uri,string>)((ListView)sender).SelectedItems[0].Tag) ,new dlQueue());
         }
     }
 }

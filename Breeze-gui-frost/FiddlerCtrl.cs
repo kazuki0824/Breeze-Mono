@@ -29,7 +29,7 @@ namespace Breeze_gui_frost
 	        Fiddler.FiddlerApplication.ResponseHeadersAvailable += FiddlerApplication_ResponseHeaderAvailable;
 	        Fiddler.CONFIG.IgnoreServerCertErrors = true;
 	        Fiddler.CONFIG.bStreamAudioVideo = true;
-        	Fiddler.FiddlerApplication.Startup(0, Fiddler.FiddlerCoreStartupFlags.CaptureLocalhostTraffic | Fiddler.FiddlerCoreStartupFlags.DecryptSSL);
+        	Fiddler.FiddlerApplication.Startup(0, Fiddler.FiddlerCoreStartupFlags.CaptureLocalhostTraffic);
 	        //TODO: クロスプラットフォーム恐らく未対応
             Fiddler.URLMonInterop.SetProxyInProcess(string.Format("127.0.0.1:{0}", Fiddler.FiddlerApplication.oProxy.ListenPort), "<local>");
             isRunning = true;

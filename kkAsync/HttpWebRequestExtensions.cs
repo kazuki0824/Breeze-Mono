@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 
-namespace rslibMonoCSharp
+namespace kkAsync
 {
     public static class WebRequestExtensions
     {

@@ -214,6 +214,7 @@
             this.listView2.Size = new System.Drawing.Size(247, 148);
             this.listView2.TabIndex = 0;
             this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.DoubleClick += new System.EventHandler(this.listView2_DoubleClick);
             // 
             // index
             // 

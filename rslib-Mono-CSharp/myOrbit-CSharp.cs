@@ -45,7 +45,7 @@ public class myOrbit
 	public static vServiceKind UsingParserCk(string u)
 	{
 		vServiceKind attribute = default(vServiceKind);
-		if ((Evaltool.Evaluation(u, "http://(www\\.)?youtube\\.com/watch\\?.*", Evaltool.evalStrategy.RegularExpression)) || Evaltool.Evaluation(u, "http://youtu\\.be/\\w+")) {
+		if ((Evaltool.Evaluation(u, "http(s)?://(www\\.)?youtube\\.com/watch\\?.*", Evaltool.evalStrategy.RegularExpression)) || Evaltool.Evaluation(u, "http://youtu\\.be/\\w+")) {
 			attribute = vServiceKind.Youtube;
 		} else if (Evaltool.Evaluation(u, "http://(www\\.)?nicovideo\\.jp/watch/[sn][mo]\\d+", Evaltool.evalStrategy.RegularExpression)) {
 			attribute = vServiceKind.Niconico;
