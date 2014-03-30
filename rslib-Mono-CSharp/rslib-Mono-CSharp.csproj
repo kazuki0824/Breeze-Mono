@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\rslib-Mono-CSharp.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <Optimize>true</Optimize>

@@ -35,7 +35,7 @@ namespace Breeze_gui_frost
             {
                 var control = controlArray[index];
                 var sugfn = ((queueController)sender).tmp[index++];
-                item.ObserveOn(ThreadPoolScheduler.Instance).Subscribe(new Action<List<byte>>((s) =>
+                item.Subscribe(new Action<List<byte>>((s) =>
                 {
                     var dir = new DirectoryInfo(Value_downloader.DefaultPath);
                     try

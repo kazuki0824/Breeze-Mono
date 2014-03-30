@@ -1,12 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" ActiveRuntime="Mono 3.3.0 (master/6cd4ddc)&#xD;&#xA;Copyright)" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" ActiveRuntime="Mono 3.3.0 (master/6cd4ddc)&#xD;&#xA;Copyright)" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Breeze-UI\Program.cs" Line="17" Column="1" />
-      <File FileName="Breeze-UI\MainWindow.cs" Line="1" Column="1" />
-      <File FileName="Breeze-UI\Form1.cs" Line="1" Column="1" />
       <File FileName="Breeze-gui-frost\Form1.cs" Line="1" Column="1" />
       <File FileName="Breeze-gui-frost\Program.cs" Line="1" Column="1" />
+      <File FileName="rslib-Mono-CSharp\core\Orbit-V.cs" Line="1" Column="1" />
+      <File FileName="c:\Users\和暉\Desktop\rs\Breeze\Breeze-gui-frost\QueueResolver.cs" Line="1" Column="1" />
+      <File FileName="kkAsync\Class2.cs" Line="24" Column="57" />
+      <File FileName="kkAsync\Class1.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

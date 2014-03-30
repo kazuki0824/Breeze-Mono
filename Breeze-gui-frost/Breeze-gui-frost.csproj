@@ -34,12 +34,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FiddlerCore, Version=2.4.6.3, Culture=neutral, PublicKeyToken=67cb91587178ac5a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\FiddlerCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Reactive.Core">
@@ -51,10 +45,8 @@
     <Reference Include="System.Reactive.Linq">
       <HintPath>..\packages\Rx-Linq.2.2.2\lib\net45\System.Reactive.Linq.dll</HintPath>
     </Reference>
-    <Reference Include="System.Reactive.PlatformServices">
-      <HintPath>..\packages\Rx-PlatformServices.2.2.2\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive.Windows.Forms">
+    <Reference Include="System.Reactive.Windows.Forms, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Rx-WinForms.2.2.2\lib\net45\System.Reactive.Windows.Forms.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -64,6 +56,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="FiddlerCore">
+      <HintPath>FiddlerCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BrowserInterface.cs">
@@ -152,7 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\kkAsync\kkAsync.csproj">
-      <Project>{4b7e7d5d-4f9b-4aa8-925b-b1f5c268c8dd}</Project>
+      <Project>{4B7E7D5D-4F9B-4AA8-925B-B1F5C268C8DD}</Project>
       <Name>kkAsync</Name>
     </ProjectReference>
     <ProjectReference Include="..\rslib-Mono-CSharp\rslib-Mono-CSharp.csproj">
