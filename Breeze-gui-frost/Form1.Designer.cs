@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fiddlerロードToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.browserInterface1 = new Breeze_gui_frost.BrowserInterface();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -54,8 +51,11 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fiddlerロードToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fiddlerCtrl1 = new Breeze_gui_frost.FiddlerCtrl(this.components);
             this.queueResolver1 = new Breeze_gui_frost.QueueResolver(this.components);
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -63,7 +63,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
@@ -74,6 +73,7 @@
             this.groupBox1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -107,37 +107,10 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer1.Size = new System.Drawing.Size(1234, 857);
             this.splitContainer1.SplitterDistance = 937;
             this.splitContainer1.TabIndex = 3;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(293, 857);
-            this.panel1.TabIndex = 2;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fiddlerロードToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1234, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fiddlerロードToolStripMenuItem
-            // 
-            this.fiddlerロードToolStripMenuItem.Name = "fiddlerロードToolStripMenuItem";
-            this.fiddlerロードToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.fiddlerロードToolStripMenuItem.Text = "Fiddler リッスン";
-            this.fiddlerロードToolStripMenuItem.Click += new System.EventHandler(this.fiddlerロードToolStripMenuItem_Click);
             // 
             // splitContainer2
             // 
@@ -290,7 +263,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(849, 231);
+            this.tabPage2.Size = new System.Drawing.Size(929, 231);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -304,7 +277,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(843, 225);
+            this.panel2.Size = new System.Drawing.Size(923, 225);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -314,10 +287,28 @@
             this.label1.Font = new System.Drawing.Font("Georgia", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(841, 223);
+            this.label1.Size = new System.Drawing.Size(921, 223);
             this.label1.TabIndex = 0;
             this.label1.Text = "Drop files to start conversion.";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fiddlerロードToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1234, 24);
+            this.menuStrip1.TabIndex = 0;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fiddlerロードToolStripMenuItem
+            // 
+            this.fiddlerロードToolStripMenuItem.Name = "fiddlerロードToolStripMenuItem";
+            this.fiddlerロードToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.fiddlerロードToolStripMenuItem.Text = "Fiddler リッスン";
+            this.fiddlerロードToolStripMenuItem.Click += new System.EventHandler(this.fiddlerロードToolStripMenuItem_Click);
             // 
             // fiddlerCtrl1
             // 
@@ -325,7 +316,15 @@
             // 
             // queueResolver1
             // 
-            this.queueResolver1.NormalQueuePanel = this.panel1;
+            this.queueResolver1.NormalQueuePanel = this.flowLayoutPanel1;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(293, 857);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -346,8 +345,6 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
@@ -358,6 +355,8 @@
             this.groupBox1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -367,7 +366,6 @@
         private System.Windows.Forms.ToolStripContainer toolStripContainer1;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -391,6 +389,7 @@
         private System.Windows.Forms.ColumnHeader mime;
         private System.Windows.Forms.ColumnHeader resCode;
         internal QueueResolver queueResolver1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }
 

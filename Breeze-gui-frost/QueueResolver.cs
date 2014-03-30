@@ -12,6 +12,7 @@ using System.Reactive.Disposables;
 using System.Reactive.Linq;
 using AsynchronousExtensions;
 using Fiddler;
+using System.Threading.Tasks;
 
 
 namespace Breeze_gui_frost
@@ -35,25 +36,26 @@ namespace Breeze_gui_frost
             {
                 var control = controlArray[index];
                 var sugfn = ((queueController)sender).tmp[index++];
-                item.Subscribe(new Action<List<byte>>((s) =>
+                item.Subscribe(new Action<List<byte>>(async (s) =>
                 {
                     var dir = new DirectoryInfo(Value_downloader.DefaultPath);
                     try
                     {
                         System.IO.FileStream resource = new System.IO.FileStream((dir.FullName + @"\" + sugfn).Normalize(), System.IO.FileMode.Create, System.IO.FileAccess.ReadWrite, FileShare.Inheritable, 8, true);
 
-                        int rx = s.Count;
+                        //int rx = s.Count;
                         control.Invoke(new Action(() => control.label2.Text = "WRITE"));
-                        int counter = 0;
+                        //int counter = 0;
                         int chunkSize = 65536;
-                        control.progressBar1.Value = 0;
-                        control.progressBar1.Maximum = rx;
-                        resource.WriteAsync(s, chunkSize).ObserveOn(control).Subscribe((x) => { try { control.progressBar1.Value += chunkSize; } catch { Debug.Print("{0}/{1}", control.progressBar1.Value, control.progressBar1.Maximum); } control.label1.Text = String.Format("{0} / {1} (バイト)", counter++ * chunkSize, rx); }, onError: (Exception ex) => System.Windows.Forms.MessageBox.Show(ex.Message), onCompleted: () => control.MarkAsCompleted());
+                        //control.Invoke(new Action(() => { control.progressBar1.Value = 0; control.progressBar1.Maximum = rx; }));
+                        var obs = Observer.Create<Unit>((x) => { /* try { control.progressBar1.Value += chunkSize; } catch { Debug.Print("{0}/{1}", control.progressBar1.Value, control.progressBar1.Maximum); } control.label1.Text = String.Format("{0} / {1} (バイト)", counter++ * chunkSize, rx); */ }, onError: (Exception ex) => System.Windows.Forms.MessageBox.Show(ex.Message), onCompleted: () => control.MarkAsCompleted());
 
+                        await resource.WriteAsync(s, chunkSize);
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
                         //Todo:
+                        System.Windows.Forms.MessageBox.Show(ex.ToString());
                     }
                 }));
             }
@@ -109,8 +111,13 @@ namespace Breeze_gui_frost
                      });
             queue_Instance.Add(obs, filenamewithExt, view);
             var c = m.Connect();
-                  Observable.FromEventPattern(view.radioButton1, "CheckedChanged", new ControlScheduler(view)).Subscribe(new Action<EventPattern<object>>(s => { Logger.Push("Resume/Pause", 0); if (((System.Windows.Forms.RadioButton)s.Sender).Checked) { c.Dispose(); } else { c = m.Connect(); } }));
-  }
+            try
+            {
+                var eventAssignment = Observable.FromEventPattern(view.radioButton1, "CheckedChanged", new ControlScheduler(view));
+                eventAssignment.Subscribe(new Action<EventPattern<object>>(s => { Logger.Push("Resume/Pause", 0); if (((System.Windows.Forms.RadioButton)s.Sender).Checked) { c.Dispose(); } else { c = m.Connect(); } }));
+            }
+            catch (Exception ex) { System.Windows.Forms.MessageBox.Show(ex.Message); }
+        }
         public async void factory(Fiddler.Session arg, proxy view)
         {
             var res = arg.oResponse;
